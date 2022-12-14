@@ -7,7 +7,7 @@ if [ $? == 0 ]
 then
         echo "$pkg is already installed. "
 else
-wget -O subkey https://raw.githubusercontent.com/owlstake/testnet/main/subspace/subkey
+wget -O subkey https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/subkey
 chmod +x subkey
 mv subkey /usr/bin/
 subkey --version
