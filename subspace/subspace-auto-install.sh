@@ -38,7 +38,7 @@ wget -O docker-compose.yaml https://raw.githubusercontent.com/owlstake/testnet/m
 touch .env
 ls -l
 sudo tee $HOME/subspace-docker-folder/$counter/.env > /dev/null <<EOF
-IMAGETAG=gemini-2a-2022-sep-10
+IMAGETAG=gemini-3a-2022-dec-06
 NODENAME=owlstake$counter
 PORT1=${PORTARRAY[0]}
 PORT2=${PORTARRAY[1]}
