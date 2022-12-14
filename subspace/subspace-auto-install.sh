@@ -34,7 +34,7 @@ function install {
 cd $HOME/subspace-docker-folder
 mkdir $counter
 cd $counter
-wget -O docker-compose.yaml https://raw.githubusercontent.com/owlstake/testnet/main/subspace/docker-compose.yaml
+wget -O docker-compose.yaml https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/docker-compose.yaml
 touch .env
 ls -l
 sudo tee $HOME/subspace-docker-folder/$counter/.env > /dev/null <<EOF
