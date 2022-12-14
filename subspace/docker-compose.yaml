@@ -39,7 +39,7 @@ services:
       "--base-path", "/var/subspace",
       "farm",
       "--node-rpc-url", "ws://node:9944",
-      "--ws-server-listen-addr", "0.0.0.0:${PORT3}",
+   ##   "--ws-server-listen-addr", "0.0.0.0:${PORT3}",
       "--listen-on", "/ip4/0.0.0.0/tcp/${PORT2}",
       "--reward-address", "${REWARDADDRESS}",
       "--plot-size", "${PLOTSIZE}"
