@@ -14,7 +14,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 ### Create wallet by command in linux
 ```
-wget -O create-subspace-wallet.sh https://raw.githubusercontent.com/owlstake/testnet/main/subspace/create-subspace-wallet.sh
+wget -O create-subspace-wallet.sh https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/create-subspace-wallet.sh
 chmod +x create-subspace-wallet.sh
 ./create-subspace-wallet.sh
 ```
@@ -24,7 +24,7 @@ chmod +x create-subspace-wallet.sh
 # You need to create the rewardaddress first, read above, if your PC have 8 cores then fill with 8 to create 8 addresses
 # 1 node need 1 CPU core, 2GB RAM and 10GB SSD, DYOR
 
-wget -O subspace-auto-install.sh https://raw.githubusercontent.com/owlstake/testnet/main/subspace/subspace-auto-install.sh
+wget -O subspace-auto-install.sh https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/subspace-auto-install.sh
 chmod +x subspace-auto-install.sh
 ./subspace-auto-install.sh
 
@@ -39,8 +39,8 @@ chmod +x subspace-auto-install.sh
 cd $HOME
 mkdir node1
 cd node1
-wget -O docker-compose.yaml https://raw.githubusercontent.com/owlstake/testnet/main/subspace/docker-compose.yaml
-wget -O .env https://raw.githubusercontent.com/owlstake/testnet/main/subspace/.env
+wget -O docker-compose.yaml https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/docker-compose.yaml
+wget -O .env https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/.env
 ```
 ### you can check which port you are using by this command
 ```
@@ -74,8 +74,8 @@ docker compose down
 cd $HOME
 mkdir node2
 cd node2
-wget -O docker-compose.yaml https://raw.githubusercontent.com/owlstake/testnet/main/subspace/docker-compose.yaml
-wget -O .env https://raw.githubusercontent.com/owlstake/testnet/main/subspace/.env
+wget -O docker-compose.yaml https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/docker-compose.yaml
+wget -O .env https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/.env
 
 Change ports, nodename, reward address inside .env file
 nano .env
