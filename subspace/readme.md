@@ -1,5 +1,5 @@
-## Guide
-###### Install docker and other support software
+## Hướng dẫn chạy node
+###### Cài đặt docker và cài đặt phần mềm hỗ trợ khác
 ```
 #!/bin/bash
 sudo apt update && sudo apt upgrade -y
@@ -12,14 +12,14 @@ curl -SL https://github.com/docker/compose/releases/download/v2.5.0/docker-compo
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
-### Create wallet by command in linux
+### Tạo ví trong lệnh Linux
 ```
 wget -O create-subspace-wallet.sh https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/create-subspace-wallet.sh
 chmod +x create-subspace-wallet.sh
 ./create-subspace-wallet.sh
 ```
 
-### Auto Install
+### Cài đặt tự động
 ```
 # You need to create the rewardaddress first, read above, if your PC have 8 cores then fill with 8 to create 8 addresses
 # 1 node need 1 CPU core, 2GB RAM and 10GB SSD, DYOR
@@ -33,8 +33,8 @@ chmod +x subspace-auto-install.sh
 ```
 
 
-### Manual
-###### Create folder and copy 2 file docker-compose.yaml + .env inside each folder
+### Cài tay
+###### Tạo thư mục và chép 2 file docker-compose.yaml + .env vào thư mục folder mới tạo
 ```
 cd $HOME
 mkdir node1
@@ -42,34 +42,34 @@ cd node1
 wget -O docker-compose.yaml https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/docker-compose.yaml
 wget -O .env https://raw.githubusercontent.com/huukhoa1412/sub/main/subspace/.env
 ```
-### you can check which port you are using by this command
+### Bạn có thể kiểm tra cổng nào bạn đang sử dụng bằng lệnh này
 ```
 lsof -i -P -n | grep LISTEN
 ```
-#### After finished download, you need to change variable inside file .env
-#### each file .env should be another ports, another node name, another reward address
+#### Sau khi tải xong, bạn cần thay đổi biến bên trong tệp .env
+#### Mỗi tệp .env phải là một cổng port khác, tên nút node khác, địa chỉ phần thưởng reward khác
 ```
 nano .env
 ```
-###### Some command
-###### start a node
+###### Một số lệnh
+###### Chạy 1 node
 ```
 docker compose up -d
 ```
-###### show all docker running
+###### Hiển thị tất cả docker đang chạy
 ```
 docker ps
 ```
-###### show logs
+###### Xem logs
 ```
 docker compose logs -f --tail=100 | grep <container-name>
 ```
-###### stop a node
+###### Dừng 1 node
 ```
 docker compose down
 ```
 
-### If you want run the second node or n node, just change the code here, node2 --> noden
+### Nếu bạn muốn chạy node thứ hai hoặc node n, chỉ cần thay đổi mã ở đây, node2 --> noden
 ```
 cd $HOME
 mkdir node2
@@ -81,8 +81,4 @@ Change ports, nodename, reward address inside .env file
 nano .env
 
 docker compose up -d
-```
-
-```
-grep 'SS58 Address:' backupkey.txt | sed 's/^.*: //' | sed -r 's/\s+//g'
 ```
